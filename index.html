@@ -1,543 +1,70 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDER.AI | Агентство ИИ-Автоматизации</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; }
+        .glow { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+        .gradient-text { background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Навигация -->
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="text-2xl font-bold tracking-tighter">MEDER<span class="text-blue-500">.AI</span></div>
+        <div class="space-x-6 hidden md:block">
+            <a href="#services" class="hover:text-blue-400 transition">Услуги</a>
+            <a href="#about" class="hover:text-blue-400 transition">О нас</a>
+            <a href="#contact" class="bg-blue-600 px-5 py-2 rounded-full hover:bg-blue-700 transition">Связаться</a>
+        </div>
+    </nav>
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="ru">\
-<head>\
-<meta charset="UTF-8"/>\
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>\
-<title>MEDER.AI \'97 \uc0\u1040 \u1074 \u1090 \u1086 \u1084 \u1072 \u1090 \u1080 \u1079 \u1072 \u1094 \u1080 \u1103  \u1073 \u1080 \u1079 \u1085 \u1077 \u1089 \u1072 </title>\
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>\
-<style>\
-  *,*::before,*::after\{box-sizing:border-box;margin:0;padding:0\}\
-  :root\{\
-    --bg:#080808;\
-    --bg2:#0f0f0f;\
-    --bg3:#151515;\
-    --border:#1e1e1e;\
-    --border2:#2a2a2a;\
-    --text:#f0ede6;\
-    --muted:#6b6b6b;\
-    --accent:#b5ff47;\
-    --accent2:#00ffc8;\
-  \}\
-  html\{scroll-behavior:smooth\}\
-  body\{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden\}\
-\
-  /* NAV */\
-  nav\{\
-    position:fixed;top:0;left:0;right:0;z-index:100;\
-    display:flex;align-items:center;justify-content:space-between;\
-    padding:20px 60px;\
-    border-bottom:1px solid transparent;\
-    transition:border-color .3s,background .3s;\
-  \}\
-  nav.scrolled\{background:rgba(8,8,8,.92);backdrop-filter:blur(12px);border-color:var(--border)\}\
-  .nav-logo\{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:3px;color:var(--text);text-decoration:none\}\
-  .nav-logo span\{color:var(--accent)\}\
-  .nav-links\{display:flex;gap:36px;list-style:none\}\
-  .nav-links a\{color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:.5px;transition:color .2s\}\
-  .nav-links a:hover\{color:var(--text)\}\
-  .nav-cta\{\
-    background:var(--accent);color:#080808;\
-    padding:9px 22px;border-radius:2px;\
-    font-size:13px;font-weight:500;letter-spacing:.5px;\
-    text-decoration:none;transition:opacity .2s;\
-  \}\
-  .nav-cta:hover\{opacity:.85\}\
-\
-  /* HERO */\
-  .hero\{\
-    min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;\
-    padding:0 60px 80px;\
-    position:relative;overflow:hidden;\
-  \}\
-  .hero-bg\{\
-    position:absolute;inset:0;\
-    background:\
-      radial-gradient(ellipse 60% 50% at 70% 40%, rgba(181,255,71,.04) 0%, transparent 70%),\
-      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(0,255,200,.03) 0%, transparent 60%);\
-    pointer-events:none;\
-  \}\
-  .hero-grid\{\
-    position:absolute;inset:0;\
-    background-image:\
-      linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),\
-      linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px);\
-    background-size:60px 60px;\
-    pointer-events:none;\
-  \}\
-  .hero-label\{\
-    font-family:'DM Mono',monospace;font-size:11px;letter-spacing:3px;\
-    color:var(--accent);text-transform:uppercase;\
-    margin-bottom:28px;opacity:0;\
-    animation:fadeUp .8s .2s forwards;\
-  \}\
-  .hero-title\{\
-    font-family:'Bebas Neue',sans-serif;\
-    font-size:clamp(64px,10vw,140px);\
-    line-height:.92;letter-spacing:2px;\
-    max-width:900px;\
-    opacity:0;animation:fadeUp .9s .35s forwards;\
-  \}\
-  .hero-title em\{color:var(--accent);font-style:normal\}\
-  .hero-sub\{\
-    margin-top:36px;max-width:480px;\
-    color:var(--muted);font-size:16px;line-height:1.7;\
-    opacity:0;animation:fadeUp .8s .5s forwards;\
-  \}\
-  .hero-actions\{\
-    margin-top:44px;display:flex;align-items:center;gap:24px;\
-    opacity:0;animation:fadeUp .8s .65s forwards;\
-  \}\
-  .btn-primary\{\
-    background:var(--accent);color:#080808;\
-    padding:14px 32px;border-radius:2px;\
-    font-weight:500;letter-spacing:.5px;text-decoration:none;\
-    font-size:14px;transition:opacity .2s;\
-  \}\
-  .btn-primary:hover\{opacity:.85\}\
-  .btn-ghost\{\
-    color:var(--muted);font-size:14px;text-decoration:none;\
-    display:flex;align-items:center;gap:8px;transition:color .2s;\
-  \}\
-  .btn-ghost:hover\{color:var(--text)\}\
-  .btn-ghost::after\{content:'\uc0\u8594 ';transition:transform .2s\}\
-  .btn-ghost:hover::after\{transform:translateX(4px)\}\
-  .hero-stats\{\
-    position:absolute;right:60px;bottom:80px;\
-    display:flex;flex-direction:column;gap:28px;\
-    opacity:0;animation:fadeUp .8s .8s forwards;\
-  \}\
-  .stat-item\{text-align:right\}\
-  .stat-num\{font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--text);letter-spacing:1px\}\
-  .stat-label\{font-size:11px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;font-family:'DM Mono',monospace\}\
-\
-  /* SECTION COMMONS */\
-  section\{padding:100px 60px\}\
-  .section-tag\{\
-    font-family:'DM Mono',monospace;font-size:11px;letter-spacing:3px;\
-    color:var(--accent);text-transform:uppercase;margin-bottom:20px;\
-    display:flex;align-items:center;gap:10px;\
-  \}\
-  .section-tag::before\{content:'';display:block;width:24px;height:1px;background:var(--accent)\}\
-  .section-title\{\
-    font-family:'Bebas Neue',sans-serif;\
-    font-size:clamp(44px,6vw,72px);\
-    letter-spacing:2px;line-height:1;\
-    max-width:700px;\
-  \}\
-  .section-title em\{color:var(--accent);font-style:normal\}\
-  .divider\{width:100%;height:1px;background:var(--border)\}\
-\
-  /* SERVICES */\
-  .services\{background:var(--bg)\}\
-  .services-header\{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px;flex-wrap:wrap;gap:24px\}\
-  .services-desc\{max-width:380px;color:var(--muted);font-size:15px;line-height:1.7\}\
-  .services-grid\{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)\}\
-  .service-card\{\
-    background:var(--bg);padding:44px 36px;\
-    position:relative;overflow:hidden;\
-    transition:background .3s;cursor:default;\
-  \}\
-  .service-card:hover\{background:var(--bg3)\}\
-  .service-card::after\{\
-    content:'';position:absolute;top:0;left:0;right:0;height:2px;\
-    background:var(--accent);transform:scaleX(0);transform-origin:left;\
-    transition:transform .4s ease;\
-  \}\
-  .service-card:hover::after\{transform:scaleX(1)\}\
-  .service-num\{\
-    font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2px;\
-    color:var(--muted);margin-bottom:36px;\
-  \}\
-  .service-icon\{\
-    width:44px;height:44px;margin-bottom:24px;\
-    border:1px solid var(--border2);\
-    display:flex;align-items:center;justify-content:center;\
-    border-radius:4px;\
-  \}\
-  .service-icon svg\{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.5\}\
-  .service-name\{\
-    font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:1px;\
-    margin-bottom:16px;line-height:1.1;\
-  \}\
-  .service-desc\{color:var(--muted);font-size:14px;line-height:1.7\}\
-  .service-tags\{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px\}\
-  .tag\{\
-    font-size:11px;letter-spacing:1px;font-family:'DM Mono',monospace;\
-    border:1px solid var(--border2);padding:4px 10px;border-radius:2px;color:var(--muted);\
-  \}\
-\
-  /* HOW WE WORK */\
-  .process\{background:var(--bg2)\}\
-  .process-layout\{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:60px\}\
-  .process-steps\{display:flex;flex-direction:column;gap:0\}\
-  .process-step\{\
-    padding:28px 0;border-bottom:1px solid var(--border);\
-    display:grid;grid-template-columns:48px 1fr;gap:20px;\
-    cursor:default;transition:padding .2s;\
-  \}\
-  .process-step:first-child\{border-top:1px solid var(--border)\}\
-  .step-num\{\
-    font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2px;\
-    color:var(--muted);padding-top:3px;\
-  \}\
-  .step-body\{\}\
-  .step-name\{font-size:17px;font-weight:500;margin-bottom:0;transition:color .2s\}\
-  .process-step:hover .step-name\{color:var(--accent)\}\
-  .step-detail\{\
-    font-size:14px;color:var(--muted);line-height:1.7;\
-    max-height:0;overflow:hidden;transition:max-height .4s ease,margin-top .3s;\
-  \}\
-  .process-step:hover .step-detail\{max-height:80px;margin-top:8px\}\
-  .process-visual\{\
-    position:sticky;top:120px;\
-    background:var(--bg3);border:1px solid var(--border);\
-    padding:48px;border-radius:4px;aspect-ratio:1;\
-    display:flex;flex-direction:column;justify-content:center;align-items:center;\
-    gap:16px;overflow:hidden;\
-  \}\
-  .vis-node\{\
-    background:var(--bg);border:1px solid var(--border2);\
-    padding:12px 20px;border-radius:3px;font-family:'DM Mono',monospace;\
-    font-size:12px;letter-spacing:1px;color:var(--text);\
-    position:relative;transition:border-color .3s;width:200px;text-align:center;\
-  \}\
-  .vis-node.accent\{border-color:var(--accent);color:var(--accent)\}\
-  .vis-arrow\{\
-    width:1px;height:24px;background:var(--border2);\
-    position:relative;display:flex;justify-content:center;\
-  \}\
-  .vis-arrow::after\{\
-    content:'';position:absolute;bottom:0;\
-    border:4px solid transparent;border-top-color:var(--border2);\
-    transform:translateY(100%);\
-  \}\
-  .pulse\{animation:pulse 2s ease-in-out infinite\}\
-  @keyframes pulse\{0%,100%\{opacity:.5\} 50%\{opacity:1\}\}\
-\
-  /* CLIENTS */\
-  .clients\{background:var(--bg);padding:80px 60px\}\
-  .clients-header\{text-align:center;margin-bottom:48px\}\
-  .clients-label\{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:12px\}\
-  .clients-track-wrap\{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 0\}\
-  .clients-track\{display:flex;gap:64px;width:max-content;animation:scroll 20s linear infinite\}\
-  .clients-track:hover\{animation-play-state:paused\}\
-  @keyframes scroll\{0%\{transform:translateX(0)\} 100%\{transform:translateX(-50%)\}\}\
-  .client-name\{\
-    font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;\
-    color:var(--muted);white-space:nowrap;transition:color .2s;cursor:default;\
-  \}\
-  .client-name:hover\{color:var(--text)\}\
-\
-  /* RESULTS */\
-  .results\{background:var(--bg2);padding:100px 60px\}\
-  .results-grid\{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:60px\}\
-  .result-card\{background:var(--bg2);padding:44px 36px\}\
-  .result-val\{\
-    font-family:'Bebas Neue',sans-serif;font-size:72px;line-height:1;\
-    letter-spacing:2px;\
-  \}\
-  .result-val span\{color:var(--accent)\}\
-  .result-title\{font-size:15px;font-weight:500;margin:12px 0 8px\}\
-  .result-desc\{font-size:13px;color:var(--muted);line-height:1.6\}\
-\
-  /* CTA */\
-  .cta-section\{\
-    background:var(--bg);padding:120px 60px;\
-    border-top:1px solid var(--border);\
-    text-align:center;position:relative;overflow:hidden;\
-  \}\
-  .cta-bg\{\
-    position:absolute;inset:0;\
-    background:radial-gradient(ellipse 50% 80% at 50% 100%, rgba(181,255,71,.06) 0%, transparent 70%);\
-    pointer-events:none;\
-  \}\
-  .cta-title\{\
-    font-family:'Bebas Neue',sans-serif;\
-    font-size:clamp(52px,8vw,100px);\
-    letter-spacing:3px;line-height:.95;margin-bottom:32px;\
-    position:relative;z-index:1;\
-  \}\
-  .cta-title em\{color:var(--accent);font-style:normal\}\
-  .cta-sub\{color:var(--muted);font-size:16px;max-width:420px;margin:0 auto 48px;position:relative;z-index:1\}\
-  .cta-actions\{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;position:relative;z-index:1\}\
-\
-  /* FOOTER */\
-  footer\{\
-    background:var(--bg);border-top:1px solid var(--border);\
-    padding:40px 60px;\
-    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;\
-  \}\
-  .footer-logo\{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;color:var(--text)\}\
-  .footer-logo span\{color:var(--accent)\}\
-  .footer-links\{display:flex;gap:28px;list-style:none\}\
-  .footer-links a\{color:var(--muted);font-size:13px;text-decoration:none;transition:color .2s\}\
-  .footer-links a:hover\{color:var(--text)\}\
-  .footer-copy\{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:1px\}\
-\
-  /* ANIMATIONS */\
-  @keyframes fadeUp\{from\{opacity:0;transform:translateY(28px)\} to\{opacity:1;transform:translateY(0)\}\}\
-  .reveal\{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease\}\
-  .reveal.visible\{opacity:1;transform:translateY(0)\}\
-\
-  @media(max-width:900px)\{\
-    nav\{padding:18px 24px\}\
-    .nav-links,.hero-stats\{display:none\}\
-    .hero\{padding:0 24px 64px\}\
-    section\{padding:72px 24px\}\
-    .services-grid,.results-grid\{grid-template-columns:1fr\}\
-    .process-layout\{grid-template-columns:1fr\}\
-    .process-visual\{display:none\}\
-    .clients,.cta-section,footer\{padding:60px 24px\}\
-    .services-header\{flex-direction:column;align-items:flex-start\}\
-  \}\
-</style>\
-</head>\
-<body>\
-\
-<!-- NAV -->\
-<nav id="nav">\
-  <a class="nav-logo" href="#">MEDER<span>.AI</span></a>\
-  <ul class="nav-links">\
-    <li><a href="#services">\uc0\u1059 \u1089 \u1083 \u1091 \u1075 \u1080 </a></li>\
-    <li><a href="#process">\uc0\u1050 \u1072 \u1082  \u1088 \u1072 \u1073 \u1086 \u1090 \u1072 \u1077 \u1084 </a></li>\
-    <li><a href="#results">\uc0\u1056 \u1077 \u1079 \u1091 \u1083 \u1100 \u1090 \u1072 \u1090 \u1099 </a></li>\
-    <li><a href="#contact">\uc0\u1050 \u1086 \u1085 \u1090 \u1072 \u1082 \u1090 \u1099 </a></li>\
-  </ul>\
-  <a class="nav-cta" href="https://t.me/mederbekovvich24" target="_blank">\uc0\u1055 \u1086 \u1083 \u1091 \u1095 \u1080 \u1090 \u1100  \u1082 \u1086 \u1085 \u1089 \u1091 \u1083 \u1100 \u1090 \u1072 \u1094 \u1080 \u1102 </a>\
-</nav>\
-\
-<!-- HERO -->\
-<section class="hero">\
-  <div class="hero-bg"></div>\
-  <div class="hero-grid"></div>\
-  <p class="hero-label">n8n \'b7 AI \uc0\u1072 \u1074 \u1090 \u1086 \u1084 \u1072 \u1090 \u1080 \u1079 \u1072 \u1094 \u1080 \u1103  \'b7 Dubai</p>\
-  <h1 class="hero-title">\uc0\u1042 \u1072 \u1096  \u1073 \u1080 \u1079 \u1085 \u1077 \u1089 <br/>\u1088 \u1072 \u1073 \u1086 \u1090 \u1072 \u1077 \u1090  \u1087 \u1086 \u1082 \u1072 <br/>\u1074 \u1099  <em>\u1089 \u1087 \u1080 \u1090 \u1077 </em></h1>\
-  <p class="hero-sub">\uc0\u1057 \u1090 \u1088 \u1086 \u1080 \u1084  \u1091 \u1084 \u1085 \u1099 \u1077  AI-\u1089 \u1080 \u1089 \u1090 \u1077 \u1084 \u1099  \u1085 \u1072  \u1073 \u1072 \u1079 \u1077  n8n \u1080  GPT, \u1082 \u1086 \u1090 \u1086 \u1088 \u1099 \u1077  \u1072 \u1074 \u1090 \u1086 \u1084 \u1072 \u1090 \u1080 \u1079 \u1080 \u1088 \u1091 \u1102 \u1090  \u1088 \u1091 \u1090 \u1080 \u1085 \u1091 , \u1082 \u1074 \u1072 \u1083 \u1080 \u1092 \u1080 \u1094 \u1080 \u1088 \u1091 \u1102 \u1090  \u1083 \u1080 \u1076 \u1099  \u1080  \u1079 \u1072 \u1082 \u1088 \u1099 \u1074 \u1072 \u1102 \u1090  \u1089 \u1076 \u1077 \u1083 \u1082 \u1080  \'97 24/7.</p>\
-  <div class="hero-actions">\
-    <a class="btn-primary" href="#contact">\uc0\u1054 \u1073 \u1089 \u1091 \u1076 \u1080 \u1090 \u1100  \u1087 \u1088 \u1086 \u1077 \u1082 \u1090 </a>\
-    <a class="btn-ghost" href="#services">\uc0\u1055 \u1086 \u1089 \u1084 \u1086 \u1090 \u1088 \u1077 \u1090 \u1100  \u1091 \u1089 \u1083 \u1091 \u1075 \u1080 </a>\
-  </div>\
-  <div class="hero-stats">\
-    <div class="stat-item">\
-      <div class="stat-num">40+</div>\
-      <div class="stat-label">\uc0\u1055 \u1088 \u1086 \u1077 \u1082 \u1090 \u1086 \u1074 </div>\
-    </div>\
-    <div class="stat-item">\
-      <div class="stat-num">\'d78</div>\
-      <div class="stat-label">\uc0\u1056 \u1086 \u1089 \u1090  \u1082 \u1086 \u1085 \u1074 \u1077 \u1088 \u1089 \u1080 \u1080 </div>\
-    </div>\
-    <div class="stat-item">\
-      <div class="stat-num">24/7</div>\
-      <div class="stat-label">\uc0\u1041 \u1077 \u1079  \u1074 \u1099 \u1093 \u1086 \u1076 \u1085 \u1099 \u1093 </div>\
-    </div>\
-  </div>\
-</section>\
-\
-<div class="divider"></div>\
-\
-<!-- SERVICES -->\
-<section class="services" id="services">\
-  <div class="services-header">\
-    <div>\
-      <div class="section-tag reveal">\uc0\u1063 \u1090 \u1086  \u1084 \u1099  \u1076 \u1077 \u1083 \u1072 \u1077 \u1084 </div>\
-      <h2 class="section-title reveal">\uc0\u1048 \u1085 \u1089 \u1090 \u1088 \u1091 \u1084 \u1077 \u1085 \u1090 \u1099 <br/>\u1082 \u1086 \u1090 \u1086 \u1088 \u1099 \u1077  <em>\u1079 \u1072 \u1088 \u1072 \u1073 \u1072 \u1090 \u1099 \u1074 \u1072 \u1102 \u1090 </em></h2>\
-    </div>\
-    <p class="services-desc reveal">\uc0\u1052 \u1099  \u1085 \u1077  \u1087 \u1088 \u1086 \u1089 \u1090 \u1086  \u1085 \u1072 \u1089 \u1090 \u1088 \u1072 \u1080 \u1074 \u1072 \u1077 \u1084  \u1073 \u1086 \u1090 \u1086 \u1074  \'97 \u1084 \u1099  \u1074 \u1089 \u1090 \u1088 \u1072 \u1080 \u1074 \u1072 \u1077 \u1084  \u1080 \u1085 \u1090 \u1077 \u1083 \u1083 \u1077 \u1082 \u1090  \u1074  \u1074 \u1072 \u1096 \u1080  \u1073 \u1080 \u1079 \u1085 \u1077 \u1089 -\u1087 \u1088 \u1086 \u1094 \u1077 \u1089 \u1089 \u1099 . \u1050 \u1072 \u1078 \u1076 \u1086 \u1077  \u1088 \u1077 \u1096 \u1077 \u1085 \u1080 \u1077  \u1087 \u1086 \u1076  \u1082 \u1086 \u1085 \u1082 \u1088 \u1077 \u1090 \u1085 \u1091 \u1102  \u1079 \u1072 \u1076 \u1072 \u1095 \u1091 .</p>\
-  </div>\
-  <div class="services-grid reveal">\
-    <div class="service-card">\
-      <div class="service-num">01</div>\
-      <div class="service-icon">\
-        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>\
-      </div>\
-      <div class="service-name">AI-\uc0\u1073 \u1086 \u1090 \u1099  \u1074  Telegram & WhatsApp</div>\
-      <div class="service-desc">\uc0\u1059 \u1084 \u1085 \u1099 \u1077  \u1073 \u1086 \u1090 \u1099 , \u1082 \u1086 \u1090 \u1086 \u1088 \u1099 \u1077  \u1082 \u1074 \u1072 \u1083 \u1080 \u1092 \u1080 \u1094 \u1080 \u1088 \u1091 \u1102 \u1090  \u1083 \u1080 \u1076 \u1086 \u1074 , \u1086 \u1090 \u1074 \u1077 \u1095 \u1072 \u1102 \u1090  \u1085 \u1072  \u1074 \u1086 \u1087 \u1088 \u1086 \u1089 \u1099  \u1080  \u1074 \u1077 \u1076 \u1091 \u1090  \u1082  \u1087 \u1088 \u1086 \u1076 \u1072 \u1078 \u1077 . \u1048 \u1085 \u1090 \u1077 \u1075 \u1088 \u1072 \u1094 \u1080 \u1103  \u1079 \u1072  3\'965 \u1076 \u1085 \u1077 \u1081 .</div>\
-      <div class="service-tags">\
-        <span class="tag">Telegram</span><span class="tag">WhatsApp</span><span class="tag">GPT-4o</span>\
-      </div>\
-    </div>\
-    <div class="service-card">\
-      <div class="service-num">02</div>\
-      <div class="service-icon">\
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M12 8v8"/></svg>\
-      </div>\
-      <div class="service-name">n8n \uc0\u1040 \u1074 \u1090 \u1086 \u1084 \u1072 \u1090 \u1080 \u1079 \u1072 \u1094 \u1080 \u1103  \u1087 \u1088 \u1086 \u1094 \u1077 \u1089 \u1089 \u1086 \u1074 </div>\
-      <div class="service-desc">\uc0\u1057 \u1074 \u1103 \u1079 \u1099 \u1074 \u1072 \u1077 \u1084  CRM, Google Sheets, \u1087 \u1086 \u1095 \u1090 \u1091 , \u1084 \u1077 \u1089 \u1089 \u1077 \u1085 \u1076 \u1078 \u1077 \u1088 \u1099  \u1074  \u1077 \u1076 \u1080 \u1085 \u1099 \u1081  \u1087 \u1086 \u1090 \u1086 \u1082 . \u1056 \u1091 \u1090 \u1080 \u1085 \u1072  \u1080 \u1089 \u1095 \u1077 \u1079 \u1072 \u1077 \u1090 , \u1082 \u1086 \u1084 \u1072 \u1085 \u1076 \u1072  \u1088 \u1072 \u1073 \u1086 \u1090 \u1072 \u1077 \u1090  \u1101 \u1092 \u1092 \u1077 \u1082 \u1090 \u1080 \u1074 \u1085 \u1077 \u1077 .</div>\
-      <div class="service-tags">\
-        <span class="tag">n8n</span><span class="tag">CRM</span><span class="tag">Zapier</span>\
-      </div>\
-    </div>\
-    <div class="service-card">\
-      <div class="service-num">03</div>\
-      <div class="service-icon">\
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>\
-      </div>\
-      <div class="service-name">\uc0\u1050 \u1086 \u1088 \u1087 \u1086 \u1088 \u1072 \u1090 \u1080 \u1074 \u1085 \u1099 \u1077  AI-\u1088 \u1077 \u1096 \u1077 \u1085 \u1080 \u1103 </div>\
-      <div class="service-desc">Enterprise-\uc0\u1072 \u1074 \u1090 \u1086 \u1084 \u1072 \u1090 \u1080 \u1079 \u1072 \u1094 \u1080 \u1103 : \u1086 \u1073 \u1088 \u1072 \u1073 \u1086 \u1090 \u1082 \u1072  \u1076 \u1086 \u1082 \u1091 \u1084 \u1077 \u1085 \u1090 \u1086 \u1074 , OCR, \u1080 \u1085 \u1090 \u1077 \u1075 \u1088 \u1072 \u1094 \u1080 \u1103  \u1089  ERP. \u1040 \u1088 \u1093 \u1080 \u1090 \u1077 \u1082 \u1090 \u1091 \u1088 \u1072  \u1087 \u1086 \u1076  \u1083 \u1102 \u1073 \u1091 \u1102  \u1089 \u1083 \u1086 \u1078 \u1085 \u1086 \u1089 \u1090 \u1100 .</div>\
-      <div class="service-tags">\
-        <span class="tag">OCR</span><span class="tag">ERP</span><span class="tag">API</span>\
-      </div>\
-    </div>\
-  </div>\
-</section>\
-\
-<div class="divider"></div>\
-\
-<!-- PROCESS -->\
-<section class="process" id="process">\
-  <div class="section-tag reveal">\uc0\u1050 \u1072 \u1082  \u1084 \u1099  \u1088 \u1072 \u1073 \u1086 \u1090 \u1072 \u1077 \u1084 </div>\
-  <h2 class="section-title reveal">\uc0\u1054 \u1090  \u1080 \u1076 \u1077 \u1080 <br/>\u1076 \u1086  <em>\u1088 \u1077 \u1079 \u1091 \u1083 \u1100 \u1090 \u1072 \u1090 \u1072 </em></h2>\
-  <div class="process-layout">\
-    <div class="process-steps reveal">\
-      <div class="process-step">\
-        <span class="step-num">01</span>\
-        <div class="step-body">\
-          <div class="step-name">\uc0\u1055 \u1086 \u1075 \u1088 \u1091 \u1078 \u1077 \u1085 \u1080 \u1077  \u1074  \u1073 \u1080 \u1079 \u1085 \u1077 \u1089 </div>\
-          <div class="step-detail">\uc0\u1048 \u1079 \u1091 \u1095 \u1072 \u1077 \u1084  \u1079 \u1072 \u1076 \u1072 \u1095 \u1080 , \u1087 \u1088 \u1086 \u1094 \u1077 \u1089 \u1089 \u1099  \u1080  \u1090 \u1086 \u1095 \u1082 \u1080  \u1088 \u1086 \u1089 \u1090 \u1072 . \u1053 \u1072 \u1093 \u1086 \u1076 \u1080 \u1084  \u1075 \u1076 \u1077  \u1072 \u1074 \u1090 \u1086 \u1084 \u1072 \u1090 \u1080 \u1079 \u1072 \u1094 \u1080 \u1103  \u1076 \u1072 \u1105 \u1090  \u1084 \u1072 \u1082 \u1089 \u1080 \u1084 \u1072 \u1083 \u1100 \u1085 \u1099 \u1081  \u1101 \u1092 \u1092 \u1077 \u1082 \u1090 .</div>\
-        </div>\
-      </div>\
-      <div class="process-step">\
-        <span class="step-num">02</span>\
-        <div class="step-body">\
-          <div class="step-name">\uc0\u1055 \u1088 \u1086 \u1077 \u1082 \u1090 \u1080 \u1088 \u1086 \u1074 \u1072 \u1085 \u1080 \u1077  \u1088 \u1077 \u1096 \u1077 \u1085 \u1080 \u1103 </div>\
-          <div class="step-detail">\uc0\u1060 \u1086 \u1088 \u1084 \u1080 \u1088 \u1091 \u1077 \u1084  \u1072 \u1088 \u1093 \u1080 \u1090 \u1077 \u1082 \u1090 \u1091 \u1088 \u1091 : \u1082 \u1072 \u1082 \u1080 \u1077  \u1090 \u1077 \u1093 \u1085 \u1086 \u1083 \u1086 \u1075 \u1080 \u1080 , \u1082 \u1072 \u1082 \u1080 \u1077  \u1076 \u1072 \u1085 \u1085 \u1099 \u1077 , \u1082 \u1072 \u1082 \u1080 \u1077  \u1089 \u1094 \u1077 \u1085 \u1072 \u1088 \u1080 \u1080 . UX-\u1087 \u1086 \u1090 \u1086 \u1082  \u1080  \u1087 \u1083 \u1072 \u1085  \u1080 \u1085 \u1090 \u1077 \u1075 \u1088 \u1072 \u1094 \u1080 \u1081 .</div>\
-        </div>\
-      </div>\
-      <div class="process-step">\
-        <span class="step-num">03</span>\
-        <div class="step-body">\
-          <div class="step-name">\uc0\u1056 \u1072 \u1079 \u1088 \u1072 \u1073 \u1086 \u1090 \u1082 \u1072  \u1080  \u1079 \u1072 \u1087 \u1091 \u1089 \u1082 </div>\
-          <div class="step-detail">\uc0\u1057 \u1090 \u1088 \u1086 \u1080 \u1084  workflow, \u1086 \u1073 \u1091 \u1095 \u1072 \u1077 \u1084  \u1084 \u1086 \u1076 \u1077 \u1083 \u1100 , \u1080 \u1085 \u1090 \u1077 \u1075 \u1088 \u1080 \u1088 \u1091 \u1077 \u1084  \u1089  \u1074 \u1072 \u1096 \u1080 \u1084 \u1080  \u1089 \u1080 \u1089 \u1090 \u1077 \u1084 \u1072 \u1084 \u1080 . \u1057 \u1088 \u1086 \u1082  \'97 \u1086 \u1090  5 \u1088 \u1072 \u1073 \u1086 \u1095 \u1080 \u1093  \u1076 \u1085 \u1077 \u1081 .</div>\
-        </div>\
-      </div>\
-      <div class="process-step">\
-        <span class="step-num">04</span>\
-        <div class="step-body">\
-          <div class="step-name">\uc0\u1058 \u1077 \u1089 \u1090 \u1080 \u1088 \u1086 \u1074 \u1072 \u1085 \u1080 \u1077 </div>\
-          <div class="step-detail">\uc0\u1055 \u1088 \u1086 \u1075 \u1086 \u1085 \u1103 \u1077 \u1084  \u1088 \u1077 \u1072 \u1083 \u1100 \u1085 \u1099 \u1077  \u1089 \u1094 \u1077 \u1085 \u1072 \u1088 \u1080 \u1080 , \u1076 \u1086 \u1088 \u1072 \u1073 \u1072 \u1090 \u1099 \u1074 \u1072 \u1077 \u1084  \u1080  \u1086 \u1087 \u1090 \u1080 \u1084 \u1080 \u1079 \u1080 \u1088 \u1091 \u1077 \u1084  \u1076 \u1086  \u1085 \u1091 \u1078 \u1085 \u1086 \u1075 \u1086  \u1088 \u1077 \u1079 \u1091 \u1083 \u1100 \u1090 \u1072 \u1090 \u1072 .</div>\
-        </div>\
-      </div>\
-      <div class="process-step">\
-        <span class="step-num">05</span>\
-        <div class="step-body">\
-          <div class="step-name">\uc0\u1055 \u1086 \u1076 \u1076 \u1077 \u1088 \u1078 \u1082 \u1072  \u1080  \u1088 \u1072 \u1079 \u1074 \u1080 \u1090 \u1080 \u1077 </div>\
-          <div class="step-detail">\uc0\u1053 \u1077  \u1073 \u1088 \u1086 \u1089 \u1072 \u1077 \u1084  \u1087 \u1086 \u1089 \u1083 \u1077  \u1088 \u1077 \u1083 \u1080 \u1079 \u1072 . \u1054 \u1073 \u1085 \u1086 \u1074 \u1083 \u1103 \u1077 \u1084 , \u1084 \u1072 \u1089 \u1096 \u1090 \u1072 \u1073 \u1080 \u1088 \u1091 \u1077 \u1084  \u1080  \u1076 \u1086 \u1085 \u1072 \u1089 \u1090 \u1088 \u1072 \u1080 \u1074 \u1072 \u1077 \u1084  \u1087 \u1086 \u1076  \u1088 \u1086 \u1089 \u1090  \u1073 \u1080 \u1079 \u1085 \u1077 \u1089 \u1072 .</div>\
-        </div>\
-      </div>\
-    </div>\
-    <div class="process-visual reveal">\
-      <div class="vis-node">\uc0\u1042 \u1093 \u1086 \u1076 \u1103 \u1097 \u1080 \u1081  \u1083 \u1080 \u1076 </div>\
-      <div class="vis-arrow pulse"></div>\
-      <div class="vis-node accent">AI-\uc0\u1082 \u1074 \u1072 \u1083 \u1080 \u1092 \u1080 \u1082 \u1072 \u1094 \u1080 \u1103 </div>\
-      <div class="vis-arrow pulse"></div>\
-      <div class="vis-node">CRM + \uc0\u1091 \u1074 \u1077 \u1076 \u1086 \u1084 \u1083 \u1077 \u1085 \u1080 \u1077 </div>\
-      <div class="vis-arrow pulse"></div>\
-      <div class="vis-node">\uc0\u1057 \u1076 \u1077 \u1083 \u1082 \u1072  \u1079 \u1072 \u1082 \u1088 \u1099 \u1090 \u1072  \u10003 </div>\
-    </div>\
-  </div>\
-</section>\
-\
-<div class="divider"></div>\
-\
-<!-- CLIENTS MARQUEE -->\
-<div class="clients" id="clients">\
-  <div class="clients-header">\
-    <div class="clients-label">\uc0\u1053 \u1072 \u1084  \u1076 \u1086 \u1074 \u1077 \u1088 \u1103 \u1102 \u1090 </div>\
-  </div>\
-  <div class="clients-track-wrap">\
-    <div class="clients-track">\
-      <span class="client-name">E-Commerce</span>\
-      <span class="client-name">\'b7</span>\
-      <span class="client-name">\uc0\u1053 \u1077 \u1076 \u1074 \u1080 \u1078 \u1080 \u1084 \u1086 \u1089 \u1090 \u1100 </span>\
-      <span class="client-name">\'b7</span>\
-      <span class="client-name">\uc0\u1052 \u1077 \u1076 \u1080 \u1094 \u1080 \u1085 \u1072 </span>\
-      <span class="client-name">\'b7</span>\
-      <span class="client-name">\uc0\u1051 \u1086 \u1075 \u1080 \u1089 \u1090 \u1080 \u1082 \u1072 </span>\
-      <span class="client-name">\'b7</span>\
-      <span class="client-name">\uc0\u1057 \u1090 \u1088 \u1086 \u1080 \u1090 \u1077 \u1083 \u1100 \u1089 \u1090 \u1074 \u1086 </span>\
-      <span class="client-name">\'b7</span>\
-      <span class="client-name">\uc0\u1056 \u1080 \u1090 \u1077 \u1081 \u1083 </span>\
-      <span class="client-name">\'b7</span>\
-      <span class="client-name">SaaS</span>\
-      <span class="client-name">\'b7</span>\
-      <span class="client-name">E-Commerce</span>\
-      <span class="client-name">\'b7</span>\
-      <span class="client-name">\uc0\u1053 \u1077 \u1076 \u1074 \u1080 \u1078 \u1080 \u1084 \u1086 \u1089 \u1090 \u1100 </span>\
-      <span class="client-name">\'b7</span>\
-      <span class="client-name">\uc0\u1052 \u1077 \u1076 \u1080 \u1094 \u1080 \u1085 \u1072 </span>\
-      <span class="client-name">\'b7</span>\
-      <span class="client-name">\uc0\u1051 \u1086 \u1075 \u1080 \u1089 \u1090 \u1080 \u1082 \u1072 </span>\
-      <span class="client-name">\'b7</span>\
-      <span class="client-name">\uc0\u1057 \u1090 \u1088 \u1086 \u1080 \u1090 \u1077 \u1083 \u1100 \u1089 \u1090 \u1074 \u1086 </span>\
-      <span class="client-name">\'b7</span>\
-      <span class="client-name">\uc0\u1056 \u1080 \u1090 \u1077 \u1081 \u1083 </span>\
-      <span class="client-name">\'b7</span>\
-      <span class="client-name">SaaS</span>\
-      <span class="client-name">\'b7</span>\
-    </div>\
-  </div>\
-</div>\
-\
-<!-- RESULTS -->\
-<section class="results" id="results">\
-  <div class="section-tag reveal">\uc0\u1062 \u1080 \u1092 \u1088 \u1099  \u1075 \u1086 \u1074 \u1086 \u1088 \u1103 \u1090 </div>\
-  <h2 class="section-title reveal">\uc0\u1056 \u1077 \u1072 \u1083 \u1100 \u1085 \u1099 \u1077 <br/><em>\u1088 \u1077 \u1079 \u1091 \u1083 \u1100 \u1090 \u1072 \u1090 \u1099 </em></h2>\
-  <div class="results-grid reveal">\
-    <div class="result-card">\
-      <div class="result-val"><span>-80%</span></div>\
-      <div class="result-title">\uc0\u1056 \u1091 \u1095 \u1085 \u1086 \u1075 \u1086  \u1090 \u1088 \u1091 \u1076 \u1072 </div>\
-      <div class="result-desc">\uc0\u1056 \u1091 \u1090 \u1080 \u1085 \u1085 \u1099 \u1077  \u1079 \u1072 \u1076 \u1072 \u1095 \u1080  \'97 \u1074 \u1099 \u1075 \u1088 \u1091 \u1079 \u1082 \u1072  \u1076 \u1072 \u1085 \u1085 \u1099 \u1093 , \u1088 \u1072 \u1089 \u1089 \u1099 \u1083 \u1082 \u1080 , \u1086 \u1073 \u1088 \u1072 \u1073 \u1086 \u1090 \u1082 \u1072  \u1079 \u1072 \u1103 \u1074 \u1086 \u1082  \'97 \u1091 \u1093 \u1086 \u1076 \u1103 \u1090  \u1074  \u1072 \u1074 \u1090 \u1086 \u1084 \u1072 \u1090 \u1080 \u1095 \u1077 \u1089 \u1082 \u1080 \u1081  \u1088 \u1077 \u1078 \u1080 \u1084 .</div>\
-    </div>\
-    <div class="result-card">\
-      <div class="result-val"><span>\'d73</span></div>\
-      <div class="result-title">\uc0\u1057 \u1082 \u1086 \u1088 \u1086 \u1089 \u1090 \u1100  \u1086 \u1073 \u1088 \u1072 \u1073 \u1086 \u1090 \u1082 \u1080  \u1083 \u1080 \u1076 \u1086 \u1074 </div>\
-      <div class="result-desc">\uc0\u1041 \u1086 \u1090  \u1086 \u1090 \u1074 \u1077 \u1095 \u1072 \u1077 \u1090  \u1074  \u1087 \u1077 \u1088 \u1074 \u1091 \u1102  \u1084 \u1080 \u1085 \u1091 \u1090 \u1091  \u1087 \u1086 \u1089 \u1083 \u1077  \u1086 \u1073 \u1088 \u1072 \u1097 \u1077 \u1085 \u1080 \u1103 . \u1043 \u1086 \u1088 \u1103 \u1095 \u1080 \u1081  \u1083 \u1080 \u1076  \u1085 \u1077  \u1086 \u1089 \u1090 \u1099 \u1074 \u1072 \u1077 \u1090 .</div>\
-    </div>\
-    <div class="result-card">\
-      <div class="result-val"><span>5</span> <span style="font-size:40px;color:var(--muted)">\uc0\u1076 \u1085 \u1077 \u1081 </span></div>\
-      <div class="result-title">\uc0\u1057 \u1088 \u1077 \u1076 \u1085 \u1077 \u1077  \u1074 \u1088 \u1077 \u1084 \u1103  \u1079 \u1072 \u1087 \u1091 \u1089 \u1082 \u1072 </div>\
-      <div class="result-desc">\uc0\u1054 \u1090  \u1073 \u1088 \u1080 \u1092 \u1080 \u1085 \u1075 \u1072  \u1076 \u1086  \u1088 \u1072 \u1073 \u1086 \u1090 \u1072 \u1102 \u1097 \u1077 \u1075 \u1086  \u1088 \u1077 \u1096 \u1077 \u1085 \u1080 \u1103  \'97 \u1073 \u1077 \u1079  \u1084 \u1077 \u1089 \u1103 \u1094 \u1077 \u1074  \u1086 \u1078 \u1080 \u1076 \u1072 \u1085 \u1080 \u1103  \u1080  \u1083 \u1080 \u1096 \u1085 \u1077 \u1081  \u1073 \u1102 \u1088 \u1086 \u1082 \u1088 \u1072 \u1090 \u1080 \u1080 .</div>\
-    </div>\
-  </div>\
-</section>\
-\
-<!-- CTA -->\
-<section class="cta-section" id="contact">\
-  <div class="cta-bg"></div>\
-  <h2 class="cta-title reveal">\uc0\u1043 \u1086 \u1090 \u1086 \u1074 \u1099 <br/>\u1072 \u1074 \u1090 \u1086 \u1084 \u1072 \u1090 \u1080 \u1079 \u1080 \u1088 \u1086 \u1074 \u1072 \u1090 \u1100 <br/><em>\u1073 \u1080 \u1079 \u1085 \u1077 \u1089 ?</em></h2>\
-  <p class="cta-sub reveal">\uc0\u1056 \u1072 \u1089 \u1089 \u1082 \u1072 \u1078 \u1080 \u1090 \u1077  \u1086  \u1079 \u1072 \u1076 \u1072 \u1095 \u1077  \'97 \u1079 \u1072  24 \u1095 \u1072 \u1089 \u1072  \u1087 \u1088 \u1077 \u1076 \u1083 \u1086 \u1078 \u1080 \u1084  \u1088 \u1077 \u1096 \u1077 \u1085 \u1080 \u1077  \u1080  \u1087 \u1088 \u1080 \u1084 \u1077 \u1088 \u1085 \u1099 \u1081  \u1073 \u1102 \u1076 \u1078 \u1077 \u1090 . \u1055 \u1077 \u1088 \u1074 \u1072 \u1103  \u1082 \u1086 \u1085 \u1089 \u1091 \u1083 \u1100 \u1090 \u1072 \u1094 \u1080 \u1103  \u1073 \u1077 \u1089 \u1087 \u1083 \u1072 \u1090 \u1085 \u1086 .</p>\
-  <div class="cta-actions reveal">\
-    <a class="btn-primary" href="https://t.me/mederbekovvich24" target="_blank">\uc0\u1053 \u1072 \u1087 \u1080 \u1089 \u1072 \u1090 \u1100  \u1074  Telegram</a>\
-    <a class="btn-primary" style="background:transparent;color:var(--accent);border:1px solid var(--accent)" href="mailto:alinur6244@gmail.com">\uc0\u1053 \u1072 \u1087 \u1080 \u1089 \u1072 \u1090 \u1100  \u1085 \u1072  \u1087 \u1086 \u1095 \u1090 \u1091 </a>\
-  </div>\
-</section>\
-\
-<!-- FOOTER -->\
-<footer>\
-  <div class="footer-logo">MEDER<span>.AI</span></div>\
-  <ul class="footer-links">\
-    <li><a href="#services">\uc0\u1059 \u1089 \u1083 \u1091 \u1075 \u1080 </a></li>\
-    <li><a href="#process">\uc0\u1050 \u1072 \u1082  \u1088 \u1072 \u1073 \u1086 \u1090 \u1072 \u1077 \u1084 </a></li>\
-    <li><a href="#contact">\uc0\u1050 \u1086 \u1085 \u1090 \u1072 \u1082 \u1090 \u1099 </a></li>\
-  </ul>\
-  <div class="footer-copy">\'a9 2025 MEDER.AI \'b7 Dubai, UAE</div>\
-</footer>\
-\
-<script>\
-window.addEventListener('scroll',()=>\{\
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40);\
-\});\
-const observer=new IntersectionObserver(entries=>\{\
-  entries.forEach(e=>\{if(e.isIntersecting)\{e.target.classList.add('visible')\}\});\
-\},\{threshold:.12,rootMargin:'0px 0px -40px 0px'\});\
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));\
-</script>\
-</body>\
-</html>}
+    <!-- Главный экран -->
+    <section class="py-20 px-6 text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Внедряем <span class="gradient-text">ИИ-решения</span> в ваш бизнес</h1>
+        <p class="text-xl text-gray-400 mb-10">Автоматизируем процессы, создаем умных чат-ботов и экономим до 40% вашего времени с помощью технологий будущего.</p>
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+            <a href="#contact" class="bg-white text-black px-8 py-4 rounded-xl font-semibold hover:bg-gray-200 transition">Бесплатная консультация</a>
+            <a href="#services" class="border border-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition">Наши услуги</a>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center">Что мы делаем</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 border border-gray-800 rounded-2xl hover:border-blue-500 transition group">
+                <i class="fa-solid fa-robot text-4xl text-blue-500 mb-6"></i>
+                <h3 class="text-xl font-semibold mb-4">ИИ Чат-боты</h3>
+                <p class="text-gray-400">Умные ассистенты для продаж и поддержки 24/7, которые общаются как люди.</p>
+            </div>
+            <div class="p-8 border border-gray-800 rounded-2xl hover:border-blue-500 transition">
+                <i class="fa-solid fa-gears text-4xl text-blue-500 mb-6"></i>
+                <h3 class="text-xl font-semibold mb-4">Автоматизация</h3>
+                <p class="text-gray-400">Связываем ваши сервисы воедино, чтобы рутина выполнялась без участия человека.</p>
+            </div>
+            <div class="p-8 border border-gray-800 rounded-2xl hover:border-blue-500 transition">
+                <i class="fa-solid fa-chart-line text-4xl text-blue-500 mb-6"></i>
+                <h3 class="text-xl font-semibold mb-4">AI Консалтинг</h3>
+                <p class="text-gray-400">Анализируем бизнес и подбираем лучшие ИИ-инструменты под ваши задачи.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="py-20 px-6 text-center bg-zinc-950 rounded-[3rem] my-20 max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold mb-6">Готовы к масштабированию?</h2>
+        <p class="text-gray-400 mb-10 max-w-xl mx-auto">Оставьте заявку, и мы покажем, как ИИ может работать именно в вашей нише.</p>
+        <button class="bg-blue-600 text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-blue-700 glow transition">Написать нам</button>
+    </section>
+
+    <footer class="p-10 text-center text-gray-600 border-t border-gray-900">
+        <p>&copy; 2026 MEDER.AI. Все права защищены.</p>
+    </footer>
+</body>
+</html>
